@@ -35,31 +35,24 @@
     </div>
 </div>
 <script>
-    document.addEventListener('load', function (e) {
-        fixedHeaderAfterScroll();
+    document.addEventListener('scroll', function (e) {
+        var scrollValue = document.body.scrollTop;
+        var header = document.getElementById("menu");
+        if(scrollValue > getHelloScreenHeight()){
+            header.style.position = "fixed";
+            header.style.top = "0px";
+            header.style.left = "0px";
+            header.style.right = "0px";
+        }else{
+            if(header.style.toString().length){
+                header.style = null;
+            }
+        }
     });
 
-    function fixedHeaderAfterScroll(){
-        document.addEventListener('scroll', function (e) {
-            var scrollValue = document.body.scrollTop;
-            var header = document.getElementById("menu");
-
-            if(scrollValue > getHelloScreenHeight()){
-                header.style.position = "fixed";
-                header.style.top = "0px";
-                header.style.left = "0px";
-                header.style.right = "0px";
-            }else{
-                if(header.style.toString().length){
-                    header.style = null;
-                }
-            }
-        });
-
-        function getHelloScreenHeight() {
-            var helloScreen = document.getElementById("hello-screen");
-            return helloScreen.offsetHeight;
-        }
+    function getHelloScreenHeight() {
+        var helloScreen = document.getElementById("hello-screen");
+        return helloScreen.offsetHeight;
     }
 </script>
 </body>
