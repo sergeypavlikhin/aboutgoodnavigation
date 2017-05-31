@@ -182,26 +182,10 @@
         <a href="https://vk.com/sergey.pavlikhin" target="_blank">Автор: Павлихин Сергей</a>
     </footer>
 </div>
-<script>
-    document.addEventListener('scroll', function (e) {
-        var scrollValue = document.body.scrollTop;
-        var header = document.getElementById("menu");
-        if(scrollValue > getHelloScreenHeight()){
-            header.style.position = "fixed";
-            header.style.top = "0px";
-            header.style.left = "0px";
-            header.style.right = "0px";
-        }else{
-            if(header.style.toString().length){
-                header.style = null;
-            }
-        }
-    });
-
-    function getHelloScreenHeight() {
-        var helloScreen = document.getElementById("hello-screen");
-        return helloScreen.offsetHeight;
-    }
+<div class="up-btn" id="up-btn">
+    Вверх
+</div>
+<script src="js/app.js">
 </script>
 </body>
 </html>

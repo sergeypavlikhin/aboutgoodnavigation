@@ -216,3 +216,22 @@ footer a{
     width: 50%;
     margin: 30px
 }
+.up-btn{
+    position: fixed;
+    display: none;
+    height: 50px;
+    width: 100px;
+    color: white;
+    background: #a16c1c;
+    border-radius: 4px;
+    bottom: 5px;
+    text-align: center;
+    line-height: 50px;
+    right: 15px;
+    z-index: 101;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.up-btn:hover{
+    opacity: 1;
+}
