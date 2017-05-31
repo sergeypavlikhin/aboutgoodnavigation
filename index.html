@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        Огранизация правильной навигации на сайте | Павлихин Сергей | S4107
+    </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Основной контейнер -->
+<div class="container">
+    <!--Первый экран-->
+    <div class="screen hello-screen" id="hello-screen">
+        <div class="screen-box">
+            <div>
+                <h1>Правильная навигация на сайте</h1>
+                <h2>Автор: Павлихин Сергей</h2>
+            </div>
+        </div>
+    </div>
+    <!--Меню-->
+    <header class="menu" id="menu">
+        Thanks, God
+    </header>
+</div>
+<script>
+    document.addEventListener('load', function (e) {
+        fixedHeaderAfterScroll();
+    });
+
+    function fixedHeaderAfterScroll(){
+        document.addEventListener('scroll', function (e) {
+            var scrollValue = document.body.scrollTop;
+            var header = document.getElementById("menu");
+
+            if(scrollValue > getHelloScreenHeight()){
+                header.style.position = "fixed";
+                header.style.top = "0px";
+                header.style.left = "0px";
+                header.style.right = "0px";
+            }else{
+                if(header.style.toString().length){
+                    header.style = null;
+                }
+            }
+        });
+
+        function getHelloScreenHeight() {
+            var helloScreen = document.getElementById("hello-screen");
+            return helloScreen.offsetHeight;
+        }
+    }
+</script>
+</body>
+</html>

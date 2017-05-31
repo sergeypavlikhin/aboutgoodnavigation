@@ -1,0 +1,57 @@
+/*Tags*/
+*{
+    font-family: sans-serif;
+}
+h1, h2, h3{
+    display: block;
+    color: #212020;
+}
+h1{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+h2{
+    font-size: 1.3rem;
+}
+/*Classes*/
+/***Common-Rules*/
+.container{
+    position: relative;
+    height: 20000px;
+}
+.screen{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #ffffff;
+}
+.screen-box{
+    margin: auto;
+    min-width: 1336px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.menu{
+    position: relative;
+    line-height: 50px;
+    text-align: center;
+    background: #eee;
+}
+/***Specific-Rules*/
+.screen.hello-screen{
+    height: 50vh;
+    min-height: 500px;
+    background: url("../images/screen1.jpg") no-repeat fixed bottom;
+    background-size: cover;
+    color: white;
+}
+.screen.hello-screen h1,
+.screen.hello-screen h2{
+    background-color: rgba(0, 0, 0, 0.62);
+    color: white;
+    padding: 5px 20px;
+}
