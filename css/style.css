@@ -9,33 +9,90 @@ h1, h2, h3{
 h1{
     font-size: 3rem;
     font-weight: bolder;
+    border-bottom: 5px solid #b54508;
 }
 h2{
-    font-size: 1.3rem;
+    font-size: 2.3rem;
+}
+footer{
+    width: 100%;
+    background:  #212020;
+    height: 100px;
+    position: relative;
+}
+footer a{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    width: 185px;
+    margin: auto;
+    display: inline-block;
 }
 /*Classes*/
 /***Common-Rules*/
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.full{
+    width: 100%;
+}
 .container{
     position: relative;
-    height: 20000px;
+    overflow-x: hidden;
 }
 .screen{
     position: relative;
-    height: 100vh;
+    /*height: 100vh;*/
     width: 100vw;
     background: #ffffff;
-
     z-index: 1;
 }
 .screen-box{
     margin: auto;
-    min-width: 1336px;
+    width: 1336px;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
-    text-align: center;
+}
+.breadcrumbs-box{
+    margin: auto;
+    width: 1336px;
+    position: relative;
+}
+.breadcrumb{
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+.breadcrumb a{
+    font-size: 14px;
+    color: #aaaaaa;
+}
+.breadcrumbs-list > .breadcrumb:not(:last-child):after{
+    content: "";
+    display: block;
+    border-right: 1px solid #aaaaaa;
+    height: 15px;
+    position: absolute;
+    right: -10px;
+    top: 2px;
+    transform: skew(-30deg);
+}
+.breadcrumbs-list{
+    padding: 0;
+}
+.text{
+    font-size: 19px;
 }
 .menu{
     position: relative;
@@ -44,7 +101,41 @@ h2{
     background: #eee;
     z-index: 99;
 }
+.flex-text-left-image{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.text-justify{
+    text-align: justify;
+}
+.image{
+    -webkit-box-shadow: 1px 1px 9px 2px rgba(186,186,186,0.51);
+    -moz-box-shadow: 1px 1px 9px 2px rgba(186,186,186,0.51);
+    box-shadow: 1px 1px 9px 2px rgba(186,186,186,0.51);
+    width: 100%;
+}
+.text-image-text{
+    width: 100%;
+}
+.image-description{
+    line-height: 20px;
+    font-size: 16px;
+    color: #78645a;
+}
+.image-box{
+    text-align: center;
+}
+.flex-images{
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+}
 /***Specific-Rules*/
+.instruments-screen h1,
+.instruments-screen h2{
+    margin-top: 50px;
+}
 .screen.hello-screen{
     height: 50vh;
     min-height: 500px;
@@ -52,9 +143,41 @@ h2{
     background-size: cover;
     color: white;
 }
-.screen.hello-screen h1,
-.screen.hello-screen h2{
-    background-color: rgba(0, 0, 0, 0.62);
+.screen.slogan-screen{
+    height: 50vh;
+    min-height: 500px;
+    background: url("../images/end.jpg") no-repeat fixed top;
+    background-size: cover;
     color: white;
-    padding: 5px 20px;
+}
+.screen.hello-screen .screen-box,
+.screen.slogan-screen .screen-box{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.screen.hello-screen h2{
+    font-size: 1.3rem;
+}
+.screen.hello-screen h1,
+.screen.hello-screen h2,
+.screen.slogan-screen h1{
+    /*background-color: rgba(0, 0, 0, 0.62);*/
+    color: white;
+    padding: 20px 60px;
+    border: none;
+}
+.bad-example img{
+    width: 100%;
+}
+.bad-example{
+    margin: 0px 0px 0px 60px;
+}
+.screen.good-maner{
+    background: #b7dcdb;
+    color: white;
+}
+.instruments-article .main-menu .images-box .image-box{
+    width: 50%;
+    margin: 30px
 }
